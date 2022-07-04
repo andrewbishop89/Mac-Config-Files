@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<map name="Backup">
+		<value name="Version">4.22.203</value>
+	</map>
+	<map name="CommonSettings">
+		<value name="DemoDeviceModeEnabled">false</value>
+	</map>
+	<map name="DataCollectionSettings">
+		<value name="first_appearance_at">2022-04-26T04:03:15.532Z</value>
+		<value name="first_icue_ver">4.22.203</value>
+		<value name="inited">true</value>
+		<value name="previous_close_timestamp">1652146968690</value>
+		<value name="session_ended">true</value>
+		<value name="total_icue_starts">3</value>
+		<value name="total_time_used">2822411</value>
+		<value name="user_id">722e2ba02fbfb898ee97c24ffc2d9b718206cf7b9a495b29c6e4dd029c8e6415</value>
+	</map>
+	<map name="DeviceListWatcher">
+		<map name="device_list">
+			<value name="size">0</value>
+		</map>
+		<value name="device_list_saved_correctly">true</value>
+	</map>
+	<value name="Language">en</value>
+	<map name="LastDir">
+		<value name="ProfileProgramLink">/Applications</value>
+	</map>
+	<value name="LastLoadedAppVersion">4.22.203</value>
+	<map name="LightingLibraryStorage">
+		<value name="version">401</value>
+	</map>
+	<map name="Lightings">
+		<map name="Instant">
+			<value name="Enabled">false</value>
+		</map>
+	</map>
+	<map name="QQControlsFileDialog">
+		<binary name="favoriteFolders">%00%00%00%09%00%00%00%00%00</binary>
+		<value name="height">0</value>
+		<value name="sidebarSplit">139.5</value>
+		<value name="sidebarVisible">true</value>
+		<value name="sidebarWidth">80</value>
+		<value name="width">0</value>
+	</map>
+	<map name="Scenes">
+		<value name="DefaultScenesInitialized">true</value>
+	</map>
+	<map name="SwUpdate">
+		<value name="LastCheckDate">2022-05-10</value>
+	</map>
+	<value name="defaultProfile">{6cd71b5b-3931-40b3-b349-10604b36d69e}</value>
+	<value name="skipLandingPage">false</value>
+</config>

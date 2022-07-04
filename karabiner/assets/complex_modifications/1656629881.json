@@ -1,0 +1,102 @@
+{
+  "title": "Hyper - Open App Shortcuts",
+  "rules": [
+    {
+      "description": "Hyper+T -> Open a Terminal window",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -n -a Terminal ~"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Hyper+Y -> Open a new Youtube window",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -n https://youtube.com"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+
+    {
+      "description": "Hyper+SpaceBar -> Open CryptoBotV2 in VS Code with a terminal",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -n -a Terminal ~/CryptoTradingBotV2 && open -n -a 'Visual Studio Code' ~/CryptoTradingBotV2"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Hyper+G -> Open a new google chrome window.",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -n -a 'Google Chrome'"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
