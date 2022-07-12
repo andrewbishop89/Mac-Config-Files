@@ -264,36 +264,15 @@
                         ]
                     },
                     {
-                        "description": "Hyper+SpaceBar -> Open a CryptoBotV2 in VS Code with a terminal",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a Terminal ~/CryptoTradingBotV2 && open -a 'Visual Studio Code' ~/CryptoTradingBotV2"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Swap left_command with left_option",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "identifiers": [
+                                            {
+                                                "product_id": 49987
+                                            },
                                             {
                                                 "product_id": 50501
                                             }
@@ -320,6 +299,9 @@
                                 "conditions": [
                                     {
                                         "identifiers": [
+                                            {
+                                                "product_id": 49987
+                                            },
                                             {
                                                 "product_id": 50501
                                             }
@@ -352,6 +334,9 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "product_id": 49987
+                                            },
+                                            {
                                                 "product_id": 50501
                                             }
                                         ],
@@ -377,6 +362,9 @@
                                 "conditions": [
                                     {
                                         "identifiers": [
+                                            {
+                                                "product_id": 49987
+                                            },
                                             {
                                                 "product_id": 50501
                                             }
@@ -443,30 +431,6 @@
                                 "to": [
                                     {
                                         "shell_command": "open -n https://youtube.com"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Hyper+SpaceBar -> Open CryptoBotV2 in VS Code with a terminal",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -n -a Terminal ~/CryptoTradingBotV2 && open -n -a 'Visual Studio Code' ~/CryptoTradingBotV2"
                                     }
                                 ],
                                 "type": "basic"
