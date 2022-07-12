@@ -6,7 +6,7 @@
 ## HYPER == SHIFT + CMD + ALT + OPTION
 
 ## Quickly restart the yabai launch agent
-ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+hyper - z : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai" # brew services restart yabai && brew services restart skhd
 
 ## Close active application
 #hyper - backspace : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
@@ -65,16 +65,40 @@ hyper - r : yabai -m space --rotate 90
 #ctrl + alt + cmd + lshift - 2 : ~/Programming/Apps/scripts/switchAndFocusSIP.sh 2
 #ctrl + alt + cmd + lshift - 3 : ~/Programming/Apps/scripts/switchAndFocusSIP.sh 3
 
-## toggle window fullscreen zoom
+# ==================== WINDOW MODIFICATIONS =====================
+
+# toggle window fullscreen zoom
 hyper - f : yabai -m window --toggle zoom-fullscreen
 
-hyper - n : yabai -m space --focus prev
-hyper - m : yabai -m display --focus next
+# switch window focus
+hyper - o : yabai -m window --focus prev || yabai -m window --focus last
+hyper - i : yabai -m window --focus next || yabai -m window --focus first
 
-hyper - d : yabai -m space --create
+# move window to next display
+hyper - p : yabai -m window --display next || yabai -m window --display first
 
-hyper - i : yabai -m window --focus "$(yabai -m query --spaces --space prev | jq -r '."last-window"')"
-hyper - o : yabai -m window --focus "$(yabai -m query --spaces --space next | jq -r '."first-window"')"
+# warp windows up and down
+hyper - w : yabai -m window --warp north || yabai -m window --warp south
+hyper - e : yabai -m window --warp east || yabai -m window --warp west
+
+# ==================== DISPLAY MODIFICATIONS ====================
+
+# switch display focus
+hyper - u : yabai -m display --focus next || yabai -m display --focus first
+
+# ===================== SPACE MODIFICATIONS =====================
+
+# toggle window padding and gap (on/off)
+hyper - 2 : yabai -m space --toggle padding && yabai -m space --toggle gap
+
+# switch space focus
+# hyper - n : yabai -m space --focus next || yabai -m space --focus first # TODO FIX
+
+# toggle window being managed by yabai (on/off)
+hyper - 1 : yabai -m window --toggle float
+
+# ===============================================================
+
 
 # cycle through windows
 # hyper - i : yabai -m query --spaces | jq -re ".[] | select(.visible == 1).index" | xargs -I{} yabai -m query --windows --space {} | jq -sre "add | sort_by(.display, .frame.x, .frame.y, .id) | nth(index(map(select(.focused == 1))) - 1).id" | xargs -I{} yabai -m window --focus {}
